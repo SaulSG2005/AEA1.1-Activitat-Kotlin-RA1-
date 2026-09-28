@@ -1,0 +1,16 @@
+{
+  "terminal.integrated.env.linux": {
+    "JAVA_HOME": "/usr/lib/jvm/jdk-25-oracle-x64",
+    "PATH": "/usr/lib/jvm/jdk-25-oracle-x64/bin:${env:PATH}"
+  },
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-25",
+      "path": "/usr/lib/jvm/jdk-25-oracle-x64",
+      "default": true
+    }
+  ],
+  "code-runner.executorMap": {
+    "kotlin": "cd $dir && export JAVA_HOME=/usr/lib/jvm/jdk-25-oracle-x64 && export PATH=\"$JAVA_HOME/bin:$PATH\" && /home/alumnat/.local/share/JetBrains/Toolbox/apps/intellij-idea/plugins/Kotlin/kotlinc/bin/kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar"
+  }
+}
